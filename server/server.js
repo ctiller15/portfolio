@@ -2,11 +2,17 @@ const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
 const webpackConfig = require('../webpack.config.js');
+const bodyParser = require('body-parser');
+
 const app = express();
  
 const compiler = webpack(webpackConfig);
  
 app.use(express.static(__dirname + '/../public'));
+
+// Using bodyparser.
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
 
 
  
@@ -22,6 +28,7 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.post('/contactus', function (req, res) {
     // node mailer code
+    console.log(req.body);
     console.log("Hey! Email time! :D");
 });
  

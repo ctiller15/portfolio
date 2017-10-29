@@ -7,7 +7,7 @@ function contactMe() {
 	    cache: false,
 	    method: 'POST',
 	    success: function(data) {
-	        console.log("success!");
+	        console.log("this.state");
 	    }.bind(this),
 	    error: function(xhr, status, err) {
 	    	console.log("Error!");
@@ -43,12 +43,31 @@ class Contact extends React.Component{
 	}
 
 	handleSubmit(event) {
-		console.log(
-					this.state.name,
-					this.state.email,
-					this.state.message
-					);
 		event.preventDefault();
+		$.ajax({
+		    url: '/contactus',
+		    dataType: 'json',
+		    cache: false,
+		    method: 'POST',
+		    data: {
+		    	'name': this.state.name,
+		    	'email': this.state.email,
+		    	'message': this.state.message
+		    },
+		    success: function(data) {
+		        console.log("We did it!");
+		    }.bind(this),
+		    error: function(xhr, status, err) {
+		    	console.log("Error!");
+		        console.error(status, err.toString());
+		    }.bind(this)
+		});		
+		// console.log(
+		// 			this.state.name,
+		// 			this.state.email,
+		// 			this.state.message
+		// 			);
+
 	}
 
 	render(){
@@ -67,7 +86,7 @@ class Contact extends React.Component{
 						Comment:
 						<input type="textArea" name="contact_form" value={this.state.value} onChange={this.handleText} />
 					</label>
-					<button onClick={() => {contactMe()}}>Submit</button>
+					<button>Submit</button>
 				</form>
 			</div>
 		);
