@@ -17,18 +17,57 @@ function contactMe() {
 }
 
 class Contact extends React.Component{
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
+		this.state = {
+						name: '',
+						email: '',
+						message: ''};
+
+		this.handleName = this.handleName.bind(this);
+		this.handleEmail = this.handleEmail.bind(this);
+		this.handleText = this.handleText.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleName(event){
+		this.setState({name: event.target.value});
+	}
+
+	handleEmail(event){
+		this.setState({email: event.target.value});
+	}
+
+	handleText(event){
+		this.setState({message: event.target.value});
+	}
+
+	handleSubmit(event) {
+		console.log(
+					this.state.name,
+					this.state.email,
+					this.state.message
+					);
+		event.preventDefault();
 	}
 
 	render(){
 		return(
 			<div className="contact">
-				<form>
-					<input type="name" name="contact_name"/>
-					<input type="text" name="contact_email"/>
-					<input type="textArea" name="contact_form"/>
-					<button onClick={contactMe()}>Submit</button>
+				<form onSubmit={this.handleSubmit}>
+					<label>
+						Name:
+						<input type="name" name="contact_name" value={this.state.value} onChange={this.handleName} />
+					</label>
+					<label>
+						Email:
+						<input type="text" name="contact_email" value={this.state.value} onChange={this.handleEmail} />
+					</label>
+					<label>
+						Comment:
+						<input type="textArea" name="contact_form" value={this.state.value} onChange={this.handleText} />
+					</label>
+					<button onClick={() => {contactMe()}}>Submit</button>
 				</form>
 			</div>
 		);
