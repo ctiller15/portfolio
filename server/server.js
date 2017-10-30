@@ -37,23 +37,28 @@ app.post('/contactus', function (req, res) {
     nodemailer.createTestAccount((err, account) => {
 
       // create reusable transporter using default SMTP transport
-      let transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false, // true for 465, false for other ports
+
+      var transporter = nodemailer.createTransport({
+        service: 'gmail',
         auth: {
-          user: account.user, // generated ethereal user
-          pass: account.pass  // generated ethereal password
+          // Temporary junk account. Purely for testing.
+          user: 'christillertest@gmail.com',
+          pass: 'Freedom77'
         }
       });
 
       // setup email data with unicode.
       let mailOptions = {
-        from: '"Fred Foo " <foo@blurdybloop.com>', // sender address
-        to: 'bar@blurdybloop.com', // list of receivers
-        subject: 'Node test!', // subject line
-        text: "Hello world!",   // plain text body
-        html: '<b>Hello world?</b>' // html body
+        from: 'christillertest@gmail.com', // sender address
+        to: 'christiller2015@gmail.com', // list of receivers
+        subject: `Curiouschriscodes.com contact request, ${req.body.email}`, // subject line
+        text: `Curiouschriscodes.com contact request, ${req.body.email}`,   // plain text body
+        html: `
+              <p>This is a message from ${req.body.name}:</p>
+              <br>
+              <p>${req.body.message}</p>
+              <p><span>-${req.body.name}</span>,<br><span>-${req.body.email}</span></p>
+              ` // html body
       };
 
       // send mail with defined transport object
