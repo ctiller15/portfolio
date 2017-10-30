@@ -45,23 +45,40 @@ class Contact extends React.Component{
 	handleSubmit(event) {
 		event.preventDefault();
 		$.ajax({
-		    url: '/contactus',
-		    dataType: 'json',
-		    cache: false,
-		    method: 'POST',
-		    data: {
-		    	'name': this.state.name,
-		    	'email': this.state.email,
-		    	'message': this.state.message
-		    },
-		    success: function(data) {
-		        console.log("We did it!");
-		    }.bind(this),
-		    error: function(xhr, status, err) {
-		    	console.log("Error!");
-		        console.error(status, err.toString());
-		    }.bind(this)
-		});		
+			url: '/contactus',
+			dataType: 'json',
+			cache: false,
+			type: 'POST',
+			data: {
+				'name': this.state.name,
+				'email': this.state.email,
+				'message': this.state.message
+			},
+			success: function(data) {
+				this.setState({data: data});
+			}.bind(this),
+			error: function(xhr, status, err) {
+				console.error(status, err.toString());
+			}.bind(this)
+		});
+		// $.ajax({
+		//     url: '/contactus',
+		//     dataType: 'json',
+		//     cache: false,
+		//     method: 'POST',
+		//     data: {
+		//     	'name': this.state.name,
+		//     	'email': this.state.email,
+		//     	'message': this.state.message
+		//     },
+		//     success: function(data) {
+		//         console.log("We did it!");
+		//     }.bind(this),
+		//     error: function(xhr, status, err) {
+		//     	console.log("Error!");
+		//         console.error(status, err.toString());
+		//     }.bind(this)
+		// });		
 		// console.log(
 		// 			this.state.name,
 		// 			this.state.email,
