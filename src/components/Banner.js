@@ -8,7 +8,9 @@ class Banner extends React.Component{
 	render(){
 		return(
 			<div className="banner">
-				This is a banner.
+				<h1>Christopher Tiller</h1>
+				<hr/>
+				<h2>Making your life easier</h2>
 			</div>
 		);
 	}

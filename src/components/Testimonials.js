@@ -7,8 +7,13 @@ class Testimonials extends React.Component{
 
 	render(){
 		return(
-			<div>
-				<p>These are my testimonials</p>
+			<div className="testimonials">
+				<h2>See what others are saying</h2>
+				<div>
+					<p>
+						"Insert testimonial here."
+					</p>
+				</div>
 			</div>
 		);
 	}
