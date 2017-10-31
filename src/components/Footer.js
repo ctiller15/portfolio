@@ -9,6 +9,7 @@ class Footer extends React.Component{
 		return(
 			<footer>
 				<div>This is a footer.</div>
+				<a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
 			</footer>
 		);
 	}
