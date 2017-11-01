@@ -9,12 +9,10 @@ class Navbar extends React.Component{
 		return(
 			<nav>
 				<div className="Navbar">
-					<div>
 						<span className="main"><a href="#">CT</a> </span>
 						<span><a href="#">About</a> </span>
 						<span><a href="#">Projects</a> </span>
 						<span><a href="#">Contact</a> </span>
-					</div>
 				</div>
 			</nav>
 		);

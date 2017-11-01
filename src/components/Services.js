@@ -10,7 +10,7 @@ class Services extends React.Component{
 			<div className="Services">
 				<h2>What can I do for you?</h2>
 
-				<p>When I build a website for you, I promise the following:</p>
+				<p>When I build a website for you, you get...</p>
 
 				<div className="promise1">
 					<h3>Clear communication</h3>
@@ -28,9 +28,6 @@ class Services extends React.Component{
 						{/*http://simpleicon.com/responsive-design.html
 						No clue who made this, find out?
 						*/}
-
-						}
-					}
 						<img src="/svg/responsive-design.svg"/>
 					</div>
 					<p>Your website will be optimized for everything from the smallest phones to the largest desktops</p>
@@ -45,9 +42,11 @@ class Services extends React.Component{
 					<p>I don't vanish after your site is built. I give you the means to handle the simple stuff, and if something goes wrong? Just give me a call.</p>
 				</div>
 
-				<a href="#">See my work</a>  
-				<br/>
-				<a href="#">Get in touch</a>
+				<div className="contactButtons">
+					<a className="myWork" href="#">See my work</a>  
+					<br/>
+					<a className="contactMe" href="#">Get in touch</a>
+				</div>
 			</div>
 		);
 	};

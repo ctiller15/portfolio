@@ -1,20 +1,78 @@
+/*CSS reset*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Begin CSS*/
+
 html{
 	font-family: Roboto, Lato, sans-serif;
 	font-size: 1em;
 }
 
 body{
-	width: 90%;
-	margin: 0 auto;
+	/*margin: 0;*/
+/*	width: 90%;
+	margin: 0 auto;*/
 }
 
 .banner{
+	padding: 40px 20px;
 	background: url('/img/william-bout-264826.jpg');
 	background-size: cover;
 }
 
 h1{
-	font-size: 2.4em;
+	/*margin: 0;*/
+	margin: 10px 0px;
+	font-size: 3em;
+	color: white;
 }
 
 hr{
@@ -23,12 +81,138 @@ hr{
 }
 
 h4{
-	font-size: 1.2em;
+	margin: 10px 0px;
+	font-size: 1.5em;
 	font-style: italic;
 }
 
-img{
+nav{
+	background: black;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+}
+
+.Navbar{
+	display: flex;
+	justify-content: space-around;
+}
+
+.profile img{
 	width: 50%;
 	height: auto;
-	margin: 0 25%;
+	margin: 10% 25%;
+}
+
+.detail h2{
+	text-align: center;
+	font-size: 2em;
+	margin: 5% 0;
+}
+
+.detail p{
+	line-height: 1.2em;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+.Services{
+
+}
+
+.Services h2{
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.Services>p{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: .5em;
+	font-size: 1.3em;
+}
+
+.promise1 h3{
+	font-size: 1.7em;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.promise1 img{
+	display: block;
+	border: 4px solid black;
+	border-radius: 999px;
+	height: 100px;
+	width: 100px;
+	margin: 10% auto;
+}
+
+.promise1 p{
+	width: 80%;
+	margin: 0 auto 10%;
+}
+
+.promise2 h3{
+	font-size: 1.7em;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.promise2 img{
+	display: block;
+	border: 4px solid black;
+	border-radius: 999px;
+	height: 100px;
+	width: 100px;
+	margin: 10% auto;
+}
+
+.promise2 p{
+	width: 80%;
+	margin: 0 auto 10%;
+}
+
+.promise3 h3{
+	font-size: 1.7em;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.promise3 img{
+	display: block;
+	border: 4px solid black;
+	border-radius: 999px;
+	height: 100px;
+	width: 100px;
+	margin: 10% auto;
+}
+
+.promise3 p{
+	width: 80%;
+	margin: 0 auto 10%;
+}
+
+.contactButtons{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 10%;
+}
+
+.contactButtons a{
+	color: black;
+	text-decoration: none;
+	height: 40px;
+	width: 100px;
+	border: 1px solid blue;
+	border-radius: 5px;
+	background: blue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

@@ -8,7 +8,7 @@ class AboutPage extends React.Component{
 	render(){
 		return(
 			<div>
-				<div>
+				<div className="profile">
 					<img src="/img/Profile_Pic_10-25-2017_0002.jpg"/>
 				</div>
 				<div className="detail">
