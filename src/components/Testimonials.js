@@ -10,9 +10,12 @@ class Testimonials extends React.Component{
 			<div className="testimonials">
 				<h2>See what others are saying</h2>
 				<div>
-					<p>
-						"Insert testimonial here."
+					<p className="testimonialText">
+						"Phasellus fringilla venenatis enim ut malesuada.
+						 Duis rhoncus sem vel dui euismod varius. Vestibulum vitae ultrices magna.
+						 Nulla non egestas sem."
 					</p>
+					<p className="testimonialName">-Anonymous fellow</p>
 				</div>
 			</div>
 		);

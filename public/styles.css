@@ -49,6 +49,28 @@ table {
 	border-spacing: 0;
 }
 
+button{
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+input, textarea{
+	-webkit-appearance: none;
+	border-style: none;
+}
+
+input:focus, textarea:focus{
+	outline-offset: 0px;
+}
+
+:focus{
+	outline: none;
+}
+
 /*Begin CSS*/
 
 html{
@@ -215,4 +237,126 @@ nav a{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.projectSect{
+	margin-bottom: 10%;
+}
+
+.projectNav{
+	display: flex;
+	justify-content: space-around;
+	height: 50px;
+	align-items: center;
+	margin-bottom: 10%;
+	background: black;
+	color: white;
+}
+
+.projectNav button{
+	background: gray;
+	height: 2em;
+	width: 8em;
+	border-radius: 5px;
+}
+
+.projectView{
+	height: 250px;
+	display: block;
+	border: 1px solid black;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	border-radius: 5px;
+}
+
+.projectInfo{
+	display: block;
+	width: 90%;
+	margin: 10px auto;
+}
+
+.projectList{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.projectList div{
+	width: 30%;
+	border: 1px solid black;
+	height: 50px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+
+.hiddenProj{
+	display: none;
+}
+
+.testimonials{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10%;
+}
+
+.testimonials h2{
+	display: block;
+	font-size: 1.7em;
+	margin: 5% auto;
+}
+
+.testimonialText{
+	font-size: 1.3em;
+	font-style: italic;
+}
+
+.testimonialName{
+	font-size: 1.1em;
+	float: right;
+}
+
+.contact{
+	margin-bottom: 10%;
+}
+
+.contact h2{
+	font-size: 1.7em;
+	text-align: center;
+	margin: 5% auto 10%;
+}
+
+form{
+	width: 90%;
+	margin: 0 auto;
+}
+
+form p{
+	font-size: 1.4em;
+	margin-bottom: 2%;
+}
+
+form input, form textarea{
+	border: 1px solid black;
+	width: 100%;
+	font-size: 1.5em;
+	padding: 2% 0;
+	margin-bottom: .75em;
+}
+
+.submit{
+	border: 1px solid black;
+	width: 100%;
+	font-size: 2em;
+	padding: 5%;
+}
+
+footer{
+	background: black;
+	color: white;
+	width: 100%;
+}
+
+footer a{
+	color: white;
 }

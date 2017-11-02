@@ -7,9 +7,20 @@ class Projects extends React.Component{
 
 	render(){
 		return(
-			<div>
-				<button>Professional</button> <h2>What I've made</h2> <button>Personal</button>
-				<div className="professional">
+			<div className="projectSect">
+				<div className="projectNav">
+					<button>Professional</button>
+					<h2>Projects</h2>
+					<button>Personal</button>
+				</div>
+				<div className="projectDisplay">
+					{/*iframe goes here!*/}
+					<iframe className="projectView"></iframe>
+					<div className="projectInfo">
+						<p>This is some dummy text describing the project</p>
+					</div>
+				</div>
+				<div className="professional projectList">
 					<div>Project 1</div>
 					<div>Project 2</div>
 					<div>Project 3</div>
@@ -18,7 +29,7 @@ class Projects extends React.Component{
 					<div>Project 6</div>
 				</div>
 				
-				<div className="personal">
+				<div className="personal projectList hiddenProj">
 					<div>Project 1</div>
 					<div>Project 2</div>
 					<div>Project 3</div>

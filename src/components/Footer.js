@@ -8,8 +8,13 @@ class Footer extends React.Component{
 	render(){
 		return(
 			<footer>
-				<div>This is a footer.</div>
-				<a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+				<div>Site created by Christopher Tiller</div>
+				<div>
+				<p> SVG images provided by <span> 
+				<a href="http://www.onlinewebfonts.com" target="_blank">online Web Fonts</a>
+				</span> and <span><a href="http://simpleicon.com" target="_blank">simpleicon</a></span>
+				</p>
+				</div>
 			</footer>
 		);
 	}

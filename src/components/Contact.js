@@ -66,26 +66,27 @@ class Contact extends React.Component{
 	render(){
 		return(
 			<div className="contact">
+				<h2>Reach out to me!</h2>
 				<form onSubmit={this.handleSubmit}>
-					<div>
+					<div className="nameInput">
 						<label>
-							Name:
+							<p>Name:</p>
 							<input type="name" name="contact_name" value={this.state.value} onChange={this.handleName} />
 						</label>
 					</div>
-					<div>
+					<div className="emailInput">
 						<label>
-							Email:
+							<p>Email:</p>
 							<input type="text" name="contact_email" value={this.state.value} onChange={this.handleEmail} />
 						</label>
 					</div>
-					<div>
+					<div className="commentInput">
 						<label>
-							Comment:
-							<input type="textArea" name="contact_form" value={this.state.value} onChange={this.handleText} />
+							<p>Comment:</p>
+							<textarea type="textArea" name="contact_form" rows="8" value={this.state.value} onChange={this.handleText}>How can I help you?</textarea>
 						</label>
 					</div>
-					<button>Submit</button>
+					<button className="submit">Submit</button>
 				</form>
 			</div>
 		);
