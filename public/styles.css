@@ -273,6 +273,17 @@ nav a{
 	border-radius: 5px;
 }
 
+.projectDisplay{
+	height: 300px;
+}
+
+.projectDisplay img{
+	display: block;
+	width: 98%;
+	height: auto;
+	margin: 0 auto;
+}
+
 .projectView{
 	height: 250px;
 	display: block;
@@ -288,11 +299,19 @@ nav a{
 	margin: 10px auto;
 }
 
+.projectInfo h4{
+	color: black;
+	text-align: center;
+	font-style: none;
+}
+
 .projectList{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+
 
 .projectList div{
 	width: 25%;
@@ -300,10 +319,13 @@ nav a{
 	height: 50px;
 	margin-bottom: 10px;
 	border-radius: 3px;
+	display: flex;
+	align-items: center;
 }
 
-.projectList iframe{
-	transform: scale(.25);
+.projectList img{
+	width: 100%;
+	height: auto;
 }
 
 .hiddenProj{
