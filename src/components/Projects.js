@@ -51,11 +51,48 @@ class Projects extends React.Component{
 		}
 	}
 
+	componentDidMount(){
+		window.onclick = function(event) {
+			// console.log(event.target.id);
+			if (event.target.classList.value === "modal"){
+				document.querySelector(`#${event.target.id}`).style.display = "none";
+			}
+		}
+	}
+
+	componentWillUnmount(){
+
+	}
+
+	openElement(elemRef){
+		// console.log(this.refs[elemRef]);
+		this.refs[elemRef].style.display = "block";
+	}
+
+	closeElement(elemRef){
+		this.refs[elemRef].style.display = "none";
+	}
+
 	projItems(){
 		return projects.map((proj, ind) => {
-		return(
-				<div key={ind} onClick={() => this.reloadImage(proj.name, proj.image, proj.url, proj.description)}>
-					<img src={proj.image}/>
+			return(
+				<div ref={`myElement${ind}`} key={ind} >
+					<div className="hidden-mobile" onClick={() => this.reloadImage(proj.name, proj.image, proj.url, proj.description)}>
+						<img src={proj.image}/>
+					</div>
+					<div className="show-mobile">
+						{/*Modal Trigger*/}
+						<img  src={proj.image} id={`project${ind}-mobile`} onClick={() => this.openElement(`myModal${ind}`)}/>
+
+						{/*Actual Modal*/}
+						<div ref={`myModal${ind}`} id={`mobileModal${ind}`} className="modal">
+							{/*Modal Content*/}
+							<div className="modal-content">
+								<span className="close" onClick={() => this.closeElement(`myModal${ind}`)}>&times;</span>
+								<p>This is some modal text...</p>
+							</div>
+						</div>
+					</div>
 				</div>		
 			);
 		});
@@ -81,7 +118,7 @@ class Projects extends React.Component{
 				<div className="projectNav">
 					<h2>Projects</h2>
 				</div>
-				<div className="projectDisplay">
+				<div className="projectDisplay hidden-mobile">
 					{/*image goes here!*/}
 					<img src={image}/>
 					<div className="projectInfo">
@@ -89,7 +126,7 @@ class Projects extends React.Component{
 						<p>{description}</p>
 					</div>
 				</div>
-				<div className="professional projectList">
+				<div className="projectList">
 					{this.projItems()}
 				</div>
 			</div>

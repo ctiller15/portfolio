@@ -311,12 +311,10 @@ nav a{
 	justify-content: space-around;
 }
 
-
-
-.projectList div{
-	width: 25%;
+.projectList>div{
+	width: 80%;
 	border: 1px solid black;
-	height: 50px;
+	height: 300px;
 	margin-bottom: 10px;
 	border-radius: 3px;
 	display: flex;
@@ -326,6 +324,67 @@ nav a{
 .projectList img{
 	width: 100%;
 	height: auto;
+}
+
+/*The general background*/
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+
+/*The individual text box*/
+.modal-content{
+	position: relative;
+	top: 200px;
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	/*Animation styles*/
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+
+/*Add animation*/
+@-webkit-keyframes animatetop{
+	from {top: -100px; opacity:0}
+	to {top: 200px ; opacity:1}
+}
+
+@keyframes animatetop {
+	from {top: -100px; opacity:0}
+	to {top: 200px; opacity:1}
+}
+
+
+.close{
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus{
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.show-mobile{
+	width: 100%;
 }
 
 .hiddenProj{
@@ -403,4 +462,10 @@ footer{
 
 footer a{
 	color: white;
+}
+
+@media screen and (max-width: 480px){
+	div.hidden-mobile{
+		display: none;
+	}
 }
