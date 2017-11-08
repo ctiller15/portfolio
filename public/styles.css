@@ -183,8 +183,8 @@ nav a{
 	display: block;
 	border: 4px solid black;
 	border-radius: 999px;
-	height: 100px;
-	width: 100px;
+	height: 150px;
+	width: 150px;
 	margin: 10% auto;
 }
 
@@ -203,8 +203,8 @@ nav a{
 	display: block;
 	border: 4px solid black;
 	border-radius: 999px;
-	height: 100px;
-	width: 100px;
+	height: 150px;
+	width: 150px;
 	margin: 10% auto;
 }
 
@@ -223,8 +223,8 @@ nav a{
 	display: block;
 	border: 4px solid black;
 	border-radius: 999px;
-	height: 100px;
-	width: 100px;
+	height: 150px;
+	width: 150px;
 	margin: 10% auto;
 }
 
@@ -240,7 +240,7 @@ nav a{
 }
 
 .contactButtons a{
-	color: black;
+	color: white;
 	text-decoration: none;
 	height: 40px;
 	width: 100px;
@@ -262,8 +262,11 @@ nav a{
 	height: 50px;
 	align-items: center;
 	margin-bottom: 10%;
-	background: black;
-	color: white;
+	color: black;
+}
+
+.projectNav h2{
+	font-size: 2em;
 }
 
 .projectNav button{
@@ -274,7 +277,7 @@ nav a{
 }
 
 .projectDisplay{
-	height: 300px;
+	margin-bottom: 5%;
 }
 
 .projectDisplay img{
@@ -313,8 +316,8 @@ nav a{
 
 .projectList>div{
 	width: 80%;
-	border: 1px solid black;
-	height: 300px;
+	/*border: 1px solid black;*/
+	height: auto;
 	margin-bottom: 10px;
 	border-radius: 3px;
 	display: flex;
@@ -324,6 +327,7 @@ nav a{
 .projectList img{
 	width: 100%;
 	height: auto;
+	border-radius: 10px;
 }
 
 /*The general background*/
@@ -345,12 +349,13 @@ nav a{
 /*The individual text box*/
 .modal-content{
 	position: relative;
-	top: 200px;
+	top: 10%;
 	background-color: #fefefe;
 	margin: 15% auto;
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
+	border-radius: 10px;
 	/*Animation styles*/
 	-webkit-animation-name: animatetop;
 	-webkit-animation-duration: 0.4s;
@@ -358,15 +363,20 @@ nav a{
 	animation-duration: 0.4s;
 }
 
+.modal-content h4{
+	color: black;
+	text-align: center;
+}
+
 /*Add animation*/
 @-webkit-keyframes animatetop{
-	from {top: -100px; opacity:0}
-	to {top: 200px ; opacity:1}
+	from {top: -10%; opacity:0}
+	to {top: 10% ; opacity:1}
 }
 
 @keyframes animatetop {
-	from {top: -100px; opacity:0}
-	to {top: 200px; opacity:1}
+	from {top: -10%; opacity:0}
+	to {top: 10%; opacity:1}
 }
 
 
@@ -447,8 +457,9 @@ form input, form textarea{
 .submit{
 	border: 1px solid black;
 	width: 100%;
-	font-size: 2em;
+	font-size: 1.7em;
 	padding: 5%;
+	border-radius: 10px;
 }
 
 footer{
@@ -467,5 +478,23 @@ footer a{
 @media screen and (max-width: 480px){
 	div.hidden-mobile{
 		display: none;
+	}
+}
+
+@media screen and (min-width: 481px){
+	div.show-mobile{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.projectList{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.projectList>div{
+		width: 30%;
 	}
 }

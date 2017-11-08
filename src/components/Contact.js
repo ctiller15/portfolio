@@ -83,7 +83,7 @@ class Contact extends React.Component{
 					<div className="commentInput">
 						<label>
 							<p>Comment:</p>
-							<textarea type="textArea" name="contact_form" rows="8" value={this.state.value} onChange={this.handleText}>How can I help you?</textarea>
+							<textarea type="textArea" name="contact_form" rows="6" value={this.state.value} onChange={this.handleText}></textarea>
 						</label>
 					</div>
 					<button className="submit">Submit</button>

@@ -76,8 +76,8 @@ class Projects extends React.Component{
 	projItems(){
 		return projects.map((proj, ind) => {
 			return(
-				<div ref={`myElement${ind}`} key={ind} >
-					<div className="hidden-mobile" onClick={() => this.reloadImage(proj.name, proj.image, proj.url, proj.description)}>
+				<div className="projects-md" ref={`myElement${ind}`} key={ind} >
+					<div className="hidden-mobile project-clickable" onClick={() => this.reloadImage(proj.name, proj.image, proj.url, proj.description)}>
 						<img src={proj.image}/>
 					</div>
 					<div className="show-mobile">
@@ -89,7 +89,9 @@ class Projects extends React.Component{
 							{/*Modal Content*/}
 							<div className="modal-content">
 								<span className="close" onClick={() => this.closeElement(`myModal${ind}`)}>&times;</span>
-								<p>This is some modal text...</p>
+								<a href={proj.url} target="_blank"><img src={proj.image}/></a>
+								<h4>{proj.name}</h4>
+								<p>{proj.description}</p>
 							</div>
 						</div>
 					</div>
