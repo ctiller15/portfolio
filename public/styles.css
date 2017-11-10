@@ -162,7 +162,7 @@ nav a{
 .Services h2{
 	font-size: 2em;
 	text-align: center;
-	margin-bottom: 1em;
+	margin: 0 auto 1em;
 	width: 90%;
 }
 
@@ -506,6 +506,48 @@ footer a{
 
 	.Navbar a{
 		font-size: 2em;
+	}
+
+	.profile{
+		float: left;
+		width: 50%;
+	}
+
+	.profile img{
+		width: 70%;
+	}
+
+	.detail h2{
+		font-size: 3em;
+		text-align: center;
+	}
+
+	.detail p{
+		line-height: 1.5em;
+		font-size: 1.6em;
+	}
+
+	.Services h2{
+		font-size: 3em;
+		text-align: center;
+	}
+
+	.Services p{
+		font-size: 2em;
+	}
+
+	.Services h3{
+		font-size: 3em;
+	}
+
+	.promiseContainer{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.promise1, .promise2, .promise3{
+		width: 50%;
 	}
 
 	.projectList{
