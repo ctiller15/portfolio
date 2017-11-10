@@ -691,3 +691,60 @@ footer a{
 		padding: 2%;
 	}
 }
+
+@media screen and (min-width: 1224px){
+	.banner{
+		height: 300px;
+		padding: 1%;
+	}
+
+	.banner hr{
+		margin: 3% 0;
+	}
+
+	.Navbar{
+		padding: 0;
+	}
+
+	div.profile{
+		width: 30%;
+	}
+
+	.profile img{
+		width: 60%;
+	}
+
+	.promise1, .promise2, .promise3{
+		width: 30%;
+	}
+
+	.promise1 h3, .promise2 h3, .promise3 h3{
+		font-size: 2em;
+	}
+
+	.promise1 p, .promise2 p, .promise3 p{
+		font-size: 1.5em;
+	}
+
+	.projectNav{
+		margin-bottom: 2%;
+	}
+
+	.projectDisplay{
+		width: 40%;
+		margin: 0 auto;
+	}
+
+	.projectInfo h4{
+		font-size: 2em;
+	}
+
+	.projectInfo p{
+		font-size: 1.5em;
+	}
+
+	.projectList>div{
+		margin: 0 auto;
+		width: 15%;
+	}
+}
