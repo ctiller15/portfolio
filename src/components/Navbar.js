@@ -8,18 +8,20 @@ class Navbar extends React.Component{
 	componentDidMount(){
 		var scrollNav = document.querySelector("nav");
 		var stickPos = window.pageYOffset + scrollNav.getBoundingClientRect().y;
+		var stickPosHeight = scrollNav.getBoundingClientRect().height;
 		// console.log(stickPos);
 		var afterElement = document.querySelector('.aboutMe');
 		var style = window.getComputedStyle(afterElement);
 		var marginTop = style.getPropertyValue('margin-top');
-		window.addEventListener('scroll', this.handleScroll.bind(this, stickPos, scrollNav, parseInt(marginTop, 10)));
+		window.addEventListener('scroll', this.handleScroll.bind(this, stickPos, stickPosHeight, scrollNav, parseInt(marginTop, 10)));
 	}
 
 	componentWillUnmount(){
 		window.removeEventListener('scroll', this.handleScroll);
 	}
 
-	handleScroll(pos, elem, marg){
+	handleScroll(pos, height, elem, marg){
+		console.log(pos);
 		// console.log(window.pageYOffset);
 		// console.log(pos);
 		// console.log(typeof(marg));
@@ -29,7 +31,7 @@ class Navbar extends React.Component{
 			elem.style.position = "fixed";
 			elem.style.top = "0";
 		{/*Remember, these values are only temporary! Code with more variable values later!*/}
-			document.querySelector(".aboutMe").style.marginTop = `${marg + 36}px`;
+			document.querySelector(".aboutMe").style.marginTop = `${marg + height}px`;
 		} else {
 			// console.log("Not sticky enough...");
 			elem.style.position = "relative";

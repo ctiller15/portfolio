@@ -488,6 +488,26 @@ footer a{
 }
 
 @media screen and (min-width: 768px){
+	.banner{
+		height: 300px;
+	}
+
+	.banner h1{
+		font-size: 5em;
+	}
+
+	.banner h4{
+		font-size: 2.5em;
+	}
+
+	.Navbar{
+		padding: 5%;
+	}
+
+	.Navbar a{
+		font-size: 2em;
+	}
+
 	.projectList{
 		display: flex;
 		justify-content: space-around;
