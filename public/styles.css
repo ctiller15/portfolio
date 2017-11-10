@@ -550,6 +550,25 @@ footer a{
 		width: 50%;
 	}
 
+	.contactButtons a{
+		width: 30%;
+		height: 80px;
+		font-size: 1.8em;
+	}
+
+	.projectNav h2{
+		font-size: 3em;
+	}
+
+	.projectDisplay h4{
+		font-size: 2em;
+	}
+
+	.projectDisplay p{
+		font-size: 1.8em;
+		text-align: center;
+	}
+
 	.projectList{
 		display: flex;
 		justify-content: space-around;
