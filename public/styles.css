@@ -167,6 +167,8 @@ nav a{
 }
 
 .Services>p{
+	display: block;
+	text-align: center;
 	width: 80%;
 	margin: 0 auto;
 	margin-bottom: .5em;
@@ -577,5 +579,115 @@ footer a{
 
 	.projectList>div{
 		width: 30%;
+	}
+
+	.testimonials{
+		width: 50%;
+	}
+
+	.testimonials h2{
+		font-size: 3em;
+	}
+
+	.testimonials p{
+		font-size: 1.8em;
+	}
+
+	.contact h2{
+		font-size: 3em;
+	}
+
+	label p{
+		font-size: 2em;
+	}
+
+	.submit{
+		font-size: 4em;
+		padding: 2%;
+	}
+
+	footer div{
+		font-size: 1.8em;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.banner{
+		padding: 7%;
+	}
+	.banner h1{
+		font-size: 6em;
+	}
+
+	.banner hr{
+		margin: 5% 0;
+	}
+
+	.banner h4{
+		font-size: 3em;
+	}
+
+	.Navbar{
+		padding: 3%;
+	}
+
+	.detail h2{
+		font-size: 4em;
+	}
+
+	.Services h2{
+		font-size: 4em;
+	}
+
+	.promise1 img, .promise2 img, .promise3 img{
+		width: 170px;
+		height: 170px;
+	}
+
+	.projectNav h2{
+		font-size: 4em;
+	}
+
+	.projectInfo h4{
+		font-size: 3em;
+	}
+
+	.projectInfo p{
+		font-size: 2em;
+	}
+
+	.contact h2{
+		font-size: 4em;
+	}
+
+	form{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	form .personal{
+		width: 48%;
+	}
+
+	form .sending{
+		width: 48%;
+	}
+
+	.contact label p{
+		font-size: 3em;
+	}
+
+	.contact input, .contact textarea{
+		font-size: 2em;
+		padding: 3.5%;
+	}
+
+	form .submit{
+		width: 50%;
+		display: block;
+		margin: 0 auto;
+		font-size: 3em;
+		padding: 2%;
 	}
 }

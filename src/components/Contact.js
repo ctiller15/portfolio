@@ -68,23 +68,27 @@ class Contact extends React.Component{
 			<div className="contact">
 				<h2>Reach out to me!</h2>
 				<form onSubmit={this.handleSubmit}>
-					<div className="nameInput">
-						<label>
-							<p>Name:</p>
-							<input type="name" name="contact_name" value={this.state.value} onChange={this.handleName} />
-						</label>
+					<div className="personal">
+						<div className="nameInput">
+							<label>
+								<p>Name:</p>
+								<input type="name" name="contact_name" value={this.state.value} onChange={this.handleName} />
+							</label>
+						</div>
+						<div className="emailInput">
+							<label>
+								<p>Email:</p>
+								<input type="text" name="contact_email" value={this.state.value} onChange={this.handleEmail} />
+							</label>
+						</div>
 					</div>
-					<div className="emailInput">
-						<label>
-							<p>Email:</p>
-							<input type="text" name="contact_email" value={this.state.value} onChange={this.handleEmail} />
-						</label>
-					</div>
-					<div className="commentInput">
-						<label>
-							<p>Comment:</p>
-							<textarea type="textArea" name="contact_form" rows="6" value={this.state.value} onChange={this.handleText}></textarea>
-						</label>
+					<div className="sending">
+						<div className="commentInput">
+							<label>
+								<p>Comment:</p>
+								<textarea type="textArea" name="contact_form" rows="6" value={this.state.value} onChange={this.handleText}></textarea>
+							</label>
+						</div>
 					</div>
 					<button className="submit">Submit</button>
 				</form>
