@@ -128,7 +128,7 @@ nav a{
 }
 
 .aboutMe{
-	margin-top: 20px;
+	margin: 20px auto 0;
 }
 
 .profile{
@@ -156,7 +156,7 @@ nav a{
 }
 
 .Services{
-
+	margin: 0 auto 10%;
 }
 
 .Services h2{
@@ -238,7 +238,6 @@ nav a{
 .contactButtons{
 	display: flex;
 	justify-content: space-around;
-	margin-bottom: 10%;
 }
 
 .contactButtons a{
@@ -255,7 +254,7 @@ nav a{
 }
 
 .projectSect{
-	margin-bottom: 10%;
+	margin: 0 auto 10%;
 }
 
 .projectNav{
@@ -406,8 +405,7 @@ nav a{
 .testimonials{
 	width: 90%;
 	display: block;
-	margin: 0 auto;
-	margin-bottom: 10%;
+	margin: 0 auto 10%;
 }
 
 .testimonials h2{
@@ -705,6 +703,13 @@ footer a{
 	.Navbar{
 		padding: 0;
 	}
+	.Navbar a{
+		font-size: 1.5em;
+	}
+
+	.aboutMe{
+		width: 80%;
+	}
 
 	div.profile{
 		width: 30%;
@@ -712,6 +717,33 @@ footer a{
 
 	.profile img{
 		width: 60%;
+	}
+
+	.detail h2{
+		font-size: 3em;
+		text-align: center;
+	}
+
+	.detail p{
+		font-size: 1.5em;
+	}
+
+	.Services{
+		width: 80%;
+		margin-bottom: 5%;
+	}
+
+	.Services h2{
+		font-size: 3em;
+		margin-bottom: 2%;
+	}
+
+	.Services p{
+		font-size: 1.5em;
+	}
+
+	.promiseContainer h3{
+		min-height: 2em;
 	}
 
 	.promise1, .promise2, .promise3{
@@ -726,6 +758,19 @@ footer a{
 		font-size: 1.5em;
 	}
 
+	.contactButtons a{
+		height: 60px;
+	}
+
+	.projectSect{
+		width: 80%;
+		margin-bottom: 5%;
+	}
+
+	.projectNav h2{
+		font-size: 3em;
+	}
+
 	.projectNav{
 		margin-bottom: 2%;
 	}
@@ -733,6 +778,7 @@ footer a{
 	.projectDisplay{
 		width: 40%;
 		margin: 0 auto;
+		min-height: 350px;
 	}
 
 	.projectInfo h4{
@@ -746,5 +792,46 @@ footer a{
 	.projectList>div{
 		margin: 0 auto;
 		width: 15%;
+	}
+
+	.testimonials{
+		width: 50%;
+		min-height: 250px;
+		margin-bottom: 5%;
+	}
+
+	.testimonials h2{
+		text-align: center;
+	}
+
+	.testimonials p{
+		font-size: 1.5em;
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	.contact{
+		width: 70%;
+		margin: 0 auto 5%;
+	}
+
+	.contact h2{
+		font-size: 3em;
+		margin-bottom: 3%;
+	}
+
+	.contact label p{
+		font-size: 2em;
+	}
+
+	.contact .submit{
+		font-size: 2em;
+		min-height: 40px;
+		padding: 1%;
+	}
+
+	footer{
+		font-size: .6em;
+		padding: 1%;
 	}
 }

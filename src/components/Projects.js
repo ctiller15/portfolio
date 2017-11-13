@@ -5,7 +5,7 @@ const projects = [
 		name: "Tampa Bay Runners",
 		image: "/img/Tampa_Bay_Runners.png",
 		url: "https://floating-atoll-98238.herokuapp.com/",
-		description: "The website for a local running club located in Tampa, Florida"
+		description: "The website for a local running club based in Tampa, Florida"
 	},
 	{
 		name: "Idea Saver",
