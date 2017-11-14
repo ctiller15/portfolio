@@ -24,11 +24,13 @@ class Page extends Component {
 				{/* <Counter/> */}
 				<Banner/>
 				<Navbar/>
-				<AboutPage/>
-				<Services/>
-				<Projects/>
-				<Testimonials/>
-				<Contact/>
+				<div className="main-content">
+					<AboutPage/>
+					<Services/>
+					<Projects/>
+					{/*<Testimonials/>*/}
+					<Contact/>
+				</div>
 				<Footer/>
 			</div>
 		);
