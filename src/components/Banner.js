@@ -7,7 +7,7 @@ class Banner extends React.Component{
 
 	render(){
 		return(
-			<div className="banner">
+			<div id="banner" className="banner">
 				<h1>Christopher Tiller</h1>
 				<hr/>
 				<h4>Clean, clear, reliable, responsive</h4>

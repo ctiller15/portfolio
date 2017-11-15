@@ -8,7 +8,7 @@ class Footer extends React.Component{
 	render(){
 		return(
 			<footer>
-				<div>Site created by Christopher Tiller</div>
+				<div>Site created by Christopher Tiller, <span class="emailMe">christiller2015@gmail.com</span></div>
 				<div>
 					<p> SVG images provided by <span> 
 					<a href="http://www.onlinewebfonts.com" target="_blank">online Web Fonts</a>

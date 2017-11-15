@@ -5,6 +5,10 @@ class Services extends React.Component{
 		super();
 	}
 
+	componentDidMount(){
+		smoothScroll();
+	}
+
 	render(){
 		return(
 			<div className="Services">
@@ -45,9 +49,9 @@ class Services extends React.Component{
 				</div>
 
 				<div className="contactButtons">
-					<a className="myWork" href="#">See my work</a>  
+					<a className="myWork" href="#projects">See my work</a>  
 					<br/>
-					<a className="contactMe" href="#">Get in touch</a>
+					<a className="contactMe" href="#contact">Get in touch</a>
 				</div>
 			</div>
 		);

@@ -470,7 +470,7 @@ form p{
 
 form input, form textarea{
 	box-sizing: border-box;
-	border: 1px solid black;
+	border: 1px solid var(--light-gray);
 	width: 100%;
 	font-size: 1.5em;
 	padding: 4% 3%;
@@ -479,8 +479,11 @@ form input, form textarea{
 	background: var(--light-gray);
 }
 
+form input:focus, form textarea:focus{
+	border: 1px solid #86C5F9;
+}
+
 .submit{
-	border: 1px solid black;
 	width: 100%;
 	font-size: 1.7em;
 	padding: 5%;
@@ -790,6 +793,10 @@ footer a{
 		height: 60px;
 	}
 
+	.contactButtons a:hover{
+		background: #FFAA38;
+	}
+
 	.projectSect{
 		width: 80%;
 		margin-bottom: 5%;
@@ -856,6 +863,11 @@ footer a{
 		font-size: 2em;
 		min-height: 40px;
 		padding: 1%;
+	}
+
+	.submit:hover{
+		background: #FFAA38;
+		cursor: pointer;
 	}
 
 	footer{

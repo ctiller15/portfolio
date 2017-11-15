@@ -6,6 +6,7 @@ class Navbar extends React.Component{
 	}
 
 	componentDidMount(){
+		smoothScroll();
 		var scrollNav = document.querySelector("nav");
 		var stickPos = window.pageYOffset + scrollNav.getBoundingClientRect().y;
 		var stickPosHeight = scrollNav.getBoundingClientRect().height;
@@ -44,10 +45,10 @@ class Navbar extends React.Component{
 		return(
 			<nav>
 				<div className="Navbar">
-						<span className="main"><a href="#">CT</a> </span>
-						<span><a href="#">About</a> </span>
-						<span><a href="#">Projects</a> </span>
-						<span><a href="#">Contact</a> </span>
+						<span className="main"><a href="#banner">CT</a> </span>
+						<span><a href="#about">About</a> </span>
+						<span><a href="#projects">Projects</a> </span>
+						<span><a href="#contact">Contact</a> </span>
 				</div>
 			</nav>
 		);

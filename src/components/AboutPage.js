@@ -7,7 +7,7 @@ class AboutPage extends React.Component{
 
 	render(){
 		return(
-			<div className="aboutMe">
+			<div className="aboutMe" id="about">
 				<div className="profile">
 					<div className="outerProf">
 						<img src="/img/Profile_Pic_10-25-2017_0002.jpg"/>

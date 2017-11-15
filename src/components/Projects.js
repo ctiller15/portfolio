@@ -116,7 +116,7 @@ class Projects extends React.Component{
 		let url = this.state.url;
 		let description = this.state.description;
 		return(
-			<div className="projectSect">
+			<div id="projects" className="projectSect">
 				<div className="projectNav">
 					<h2>Projects</h2>
 				</div>
