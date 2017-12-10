@@ -55,7 +55,16 @@ class Contact extends React.Component{
 				'message': this.state.message
 			},
 			success: function(data) {
-				this.setState({data: data});
+				this.setState({
+								name: "",
+								email: "",
+								message: ""
+							});
+				console.log(this.refs);
+				console.log(this.refs.personal.childNodes[0].childNodes[0].childNodes[1].value);
+				this.refs.personal.childNodes[0].childNodes[0].childNodes[1].value = "";
+				this.refs.personal.childNodes[1].childNodes[0].childNodes[1].value = "";
+				this.refs.sending.childNodes[0].childNodes[0].childNodes[1].value = "";
 			}.bind(this),
 			error: function(xhr, status, err) {
 				console.error(status, err.toString());
@@ -67,8 +76,8 @@ class Contact extends React.Component{
 		return(
 			<div className="contact" id="contact">
 				<h2>Reach out to me!</h2>
-				<form onSubmit={this.handleSubmit}>
-					<div className="personal">
+				<form ref="form" method="POST" onSubmit={this.handleSubmit}>
+					<div ref="personal" className="personal">
 						<div className="nameInput">
 							<label>
 								<p>Name:</p>
@@ -82,7 +91,7 @@ class Contact extends React.Component{
 							</label>
 						</div>
 					</div>
-					<div className="sending">
+					<div ref="sending" className="sending">
 						<div className="commentInput">
 							<label>
 								<p>Comment:</p>

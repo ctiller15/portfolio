@@ -1,3 +1,5 @@
+require('./config/config');
+
 const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
@@ -15,8 +17,6 @@ app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
-
- 
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
   filename: 'bundle.js',
@@ -43,7 +43,7 @@ app.post('/contactus', function (req, res) {
         auth: {
           // Temporary junk account. Purely for testing.
           user: 'christillertest@gmail.com',
-          pass: 'Freedom77'
+          pass: process.env.EMAIL_PASSWORD
         }
       });
 
