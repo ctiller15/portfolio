@@ -4,38 +4,44 @@ const projects = [
 	{
 		name: "Tampa Bay Runners",
 		image: "/img/Tampa_Bay_Runners.png",
-		url: "https://floating-atoll-98238.herokuapp.com/",
+		imgMobile: "/img/Tampa_Bay_Runners_mobile.png",
+		url: "https://www.tampabayrunners.com",
 		description: "The website for a local running club based in Tampa, Florida"
 	},
 	{
 		name: "Idea Saver",
 		image: "/img/Idea_Saver.png",
+		imgMobile: "/img/Idea_Saver_mobile.png",
 		url: "https://shielded-coast-36823.herokuapp.com/",
 		description: "A web application to store and save ideas"
 	},
 	{
-		name: "Flickr Viewer",
-		image: "/img/Flickr_viewer.png",
-		url: "https://desolate-reaches-89500.herokuapp.com/",
-		description: "A live viewer for flickr photos"
+		name: "MDI Sales",
+		image: "/img/mdi_sales.png",
+		imgMobile: "/img/mdi_sales_mobile.png",
+		url: "https://ctiller15.github.io/mdisales/",
+		description: "A mockup home page for Manufacturer Distributor's, Inc."
 	},
 	{
-		name: "Pomodoro Clock",
-		image: "/img/pomodoro.jpg",
-		url: "https://ctiller15.github.io/Pomodoro_Clock/",
-		description: "A pomodoro clock, made as a FreeCodeCamp challenge"
+		name: "5-day forecast",
+		image: "/img/Weather_App.png",
+		imgMobile: "/img/Weather_App_mobile.png",
+		url: "https://fierce-everglades-46054.herokuapp.com/",
+		description: "A five-day weather forecast, gives the high and low temperatures for the next five days."
 	},
 	{
-		name: "RGB Color Game",
-		image: "/img/color_game.jpg",
-		url: "https://ctiller15.github.io/Color_Game_Project/",
-		description: "A RGB color game",
+		name: "React Social Cards",
+		image: "/img/React_Social_Cards.png",
+		imgMobile: "/img/React_Social_Cards_mobile.png",
+		url: "https://mighty-oasis-47295.herokuapp.com/",
+		description: "A set of social cards, made with React and Flexbox."
 	},
 	{
-		name: "Mirtha's cafe website",
-		image: "/img/Mirthas_Cafe.png",
-		url: "https://ctiller15.github.io/MirthasWebsite/",
-		description: "A mockup website for Mirtha's latin cafe, in Winter Haven, FL"
+		name: "IPM Roofing",
+		image: "/img/IPMRoofing.jpg",
+		url: "https://ctiller15.github.io/IPMRoofing/",
+		imgMobile: "/img/IPMRoofing_mobile.png",
+		description: "A mockup website for a local roofing company based in Valrico, FL"
 	}
 ];
 
@@ -89,7 +95,7 @@ class Projects extends React.Component{
 							{/*Modal Content*/}
 							<div className="modal-content">
 								<span className="close" onClick={() => this.closeElement(`myModal${ind}`)}>&times;</span>
-								<a href={proj.url} target="_blank"><img src={proj.image}/></a>
+								<a href={proj.url} target="_blank"><img src={proj.imgMobile}/></a>
 								<h4>{proj.name}</h4>
 								<p>{proj.description}</p>
 							</div>

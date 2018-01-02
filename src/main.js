@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 // importing components
-import Counter from './components/Counter';
 import Banner from './components/Banner';
 import Navbar from './components/Navbar';
 import AboutPage from './components/AboutPage';

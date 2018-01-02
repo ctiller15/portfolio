@@ -101,7 +101,7 @@ body{
 
 .banner{
 	padding: 40px 20px;
-	background: url('/img/william-bout-264826.jpg');
+	background: url('/img/william-bout-264826-compressed.jpg') center center;
 	background-size: cover;
 }
 
@@ -385,6 +385,13 @@ nav a{
 	-webkit-animation-duration: 0.4s;
 	animation-name: animatetop;
 	animation-duration: 0.4s;
+}
+
+.modal-content img{
+	width: 70%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
 }
 
 .modal-content h4{
