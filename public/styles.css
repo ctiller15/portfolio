@@ -80,7 +80,7 @@ html{
 	--accent-color: #FF9200;
 	--light-gray: #eef4f9;
 	--dark-gray: #3f464b;
-	background: var(--base-color);
+	background: url("./img/cube_texture.png"), var(--base-color);
 }
 
 body{
@@ -164,7 +164,7 @@ nav a{
 }
 
 .Navbar .main a{
-	margin-right: 20px;
+	margin-right: 10px;
 }
 
 .Navbar .main a i{
