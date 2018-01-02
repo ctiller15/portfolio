@@ -206,7 +206,7 @@ nav a{
 
 .promise1 img{
 	display: block;
-	border: 4px solid black;
+	border: 4px solid var(--dark-gray);
 	border-radius: 999px;
 	height: 150px;
 	width: 150px;
@@ -226,7 +226,7 @@ nav a{
 
 .promise2 img{
 	display: block;
-	border: 4px solid black;
+	border: 4px solid var(--dark-gray);
 	border-radius: 999px;
 	height: 150px;
 	width: 150px;
@@ -246,7 +246,7 @@ nav a{
 
 .promise3 img{
 	display: block;
-	border: 4px solid black;
+	border: 4px solid var(--dark-gray);
 	border-radius: 999px;
 	height: 150px;
 	width: 150px;
@@ -336,22 +336,31 @@ nav a{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	min-height: 90px;
 }
 
 .projectList>div{
 	width: 80%;
 	/*border: 1px solid black;*/
-	height: auto;
 	margin-bottom: 10px;
-	border-radius: 3px;
 	display: flex;
 	align-items: center;
+	background: var(--accent-color);
 }
 
 .projectList img{
 	width: 100%;
-	height: auto;
-	border-radius: 10px;
+	height: 100%;
+	transition: opacity .3s;
+}
+
+.projectList img:hover{
+	cursor: pointer;
+	opacity: .8;
+}
+
+.show-mobile{
+	height: 100%;
 }
 
 /*The general background*/
@@ -395,7 +404,7 @@ nav a{
 }
 
 .modal-content h4{
-	color: black;
+	color: var(--dark-gray);
 	text-align: center;
 }
 
@@ -615,6 +624,13 @@ footer a{
 
 	.projectList>div{
 		width: 30%;
+		height: 90px;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	.hidden-mobile{
+		height: 100%;
 	}
 
 	.testimonials{
@@ -704,6 +720,9 @@ footer a{
 
 	form .personal{
 		width: 48%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
 	}
 
 	form .sending{

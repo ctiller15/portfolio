@@ -55,16 +55,14 @@ class Contact extends React.Component{
 				'message': this.state.message
 			},
 			success: function(data) {
+				this.refs.personal.childNodes[0].childNodes[0].value = "";
+				this.refs.personal.childNodes[1].childNodes[0].value = "";
+				this.refs.sending.childNodes[0].childNodes[0].value = "";
 				this.setState({
 								name: "",
 								email: "",
 								message: ""
 							});
-				console.log(this.refs);
-				console.log(this.refs.personal.childNodes[0].childNodes[0].childNodes[1].value);
-				this.refs.personal.childNodes[0].childNodes[0].childNodes[1].value = "";
-				this.refs.personal.childNodes[1].childNodes[0].childNodes[1].value = "";
-				this.refs.sending.childNodes[0].childNodes[0].childNodes[1].value = "";
 			}.bind(this),
 			error: function(xhr, status, err) {
 				console.error(status, err.toString());
@@ -79,24 +77,18 @@ class Contact extends React.Component{
 				<form ref="form" method="POST" onSubmit={this.handleSubmit}>
 					<div ref="personal" className="personal">
 						<div className="nameInput">
-							<label>
-								<p>Name:</p>
-								<input type="name" name="contact_name" value={this.state.value} onChange={this.handleName} />
-							</label>
+							<label htmlFor="contact_name">Name</label>
+							<input type="name" name="contact_name" id="contact_name" value={this.state.value} onChange={this.handleName} />
 						</div>
 						<div className="emailInput">
-							<label>
-								<p>Email:</p>
-								<input type="text" name="contact_email" value={this.state.value} onChange={this.handleEmail} />
-							</label>
+							<label htmlFor="contact_email">Email</label>
+							<input type="text" name="contact_email" id="contact_email" value={this.state.value} onChange={this.handleEmail} />
 						</div>
 					</div>
 					<div ref="sending" className="sending">
 						<div className="commentInput">
-							<label>
-								<p>Comment:</p>
-								<textarea type="textArea" name="contact_form" rows="6" value={this.state.value} onChange={this.handleText}></textarea>
-							</label>
+							<label htmlFor="contact_form">Comment</label>
+							<textarea type="textArea" name="contact_form" id="contact_form" rows="6" value={this.state.value} onChange={this.handleText}></textarea>
 						</div>
 					</div>
 					<button className="submit">Submit</button>
