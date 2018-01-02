@@ -198,6 +198,23 @@ nav a{
 	font-size: 1.3em;
 }
 
+.promiseContainer > div{
+	display: flex;
+	flex-direction: column;
+}
+
+.promiseContainer > div h3{
+	flex-basis: 50px;
+}
+
+.promiseContainer > div div{
+	flex-basis: 200px;
+}
+
+.promiseContainer > div p{
+	flex-basis: 50px;
+}
+
 .promise1 h3{
 	font-size: 1.7em;
 	text-align: center;
@@ -302,13 +319,17 @@ nav a{
 
 .projectDisplay{
 	margin-bottom: 5%;
+	display: flex;
+	flex-direction: column;
+	height: 550px;
 }
 
 .projectDisplay img{
 	display: block;
-	width: 98%;
+	width: 90%;
 	height: auto;
 	margin: 0 auto;
+	flex-basis: 400px;
 }
 
 .projectView{
@@ -324,6 +345,7 @@ nav a{
 	display: block;
 	width: 90%;
 	margin: 10px auto;
+	flex-basis: 150px;
 }
 
 .projectInfo h4{
@@ -593,6 +615,18 @@ footer a{
 		justify-content: space-around;
 	}
 
+	.promiseContainer > div h3{
+		flex-basis: 100px;
+	}
+
+	.promiseContainer > div div{
+		flex-basis: 250px;
+	}
+
+	.promiseContainer > div p{
+		flex-basis: 100px;
+	}
+
 	.promise1, .promise2, .promise3{
 		width: 50%;
 	}
@@ -606,6 +640,8 @@ footer a{
 	.projectNav h2{
 		font-size: 3em;
 	}
+
+
 
 	.projectDisplay h4{
 		font-size: 2em;
@@ -624,13 +660,9 @@ footer a{
 
 	.projectList>div{
 		width: 30%;
-		height: 90px;
+		height: 100px;
 		border-radius: 5px;
 		overflow: hidden;
-	}
-
-	.hidden-mobile{
-		height: 100%;
 	}
 
 	.testimonials{
@@ -696,6 +728,18 @@ footer a{
 		height: 170px;
 	}
 
+	.projectDisplay{
+		height: 600px;
+	}
+
+	.projectDisplay img{
+		flex-basis: 500px;
+	}
+
+	.projectDisplay .projectInfo{
+		flex-basis: 100px;
+	}
+
 	.projectNav h2{
 		font-size: 4em;
 	}
@@ -706,6 +750,14 @@ footer a{
 
 	.projectInfo p{
 		font-size: 2em;
+	}
+
+	.projectList > div{
+		height: 150px;
+	}
+
+	.hidden-mobile{
+		height: 100%;
 	}
 
 	.contact h2{
@@ -839,7 +891,11 @@ footer a{
 	.projectDisplay{
 		width: 50%;
 		margin: 0 auto;
-		min-height: 400px;
+		height: 400px;
+	}
+
+	.projectDisplay img{
+		flex-basis: auto;
 	}
 
 	.projectInfo h4{
@@ -853,6 +909,11 @@ footer a{
 	.projectList>div{
 		margin: 0 auto;
 		width: 15%;
+		height: 90px;
+	}
+
+	.hidden-mobile{
+		height: 100%;
 	}
 
 	.testimonials{
